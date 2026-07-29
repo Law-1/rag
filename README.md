@@ -8,6 +8,7 @@
 BM25 索引（内存）
 ↓
 用户提问 → 混合检索 + 重排序 → 拼接 Prompt → 大模型生成答案
+
 所有组件通过 FastAPI 管理，支持启动时自动恢复历史文档索引。
 
 ## 功能特性
@@ -19,12 +20,12 @@ BM25 索引（内存）
 
 ## 技术栈
 - **后端框架**：FastAPI
-- **大语言模型**：通义千问（通过阿里云 DashScope）
+- **大语言模型**：通义千问（阿里云 DashScope）
 - **嵌入模型**：DashScope text-embedding-v2
 - **重排序模型**：BAAI/bge-reranker-base（支持离线加载）
 - **向量数据库**：Chroma
 - **文档处理**：LangChain Community Loaders
-- **其他**：BM25 (rank_bm25), sentence-transformers
+- **其他**：rank_bm25, sentence-transformers
 
 ## 快速启动
 
@@ -38,6 +39,7 @@ BM25 索引（内存）
 model_name=qwen-max
 DASHSCOPE_API_KEY=你的阿里云API密钥
 embedding_model_name=text-embedding-v2
+
 3. 放置重排序模型（可选，若无法联网）
 将模型文件夹 bge-reranker-base 放到 local_models/ 下，或在 retriever.py 中指定本地路径。
 
@@ -67,4 +69,5 @@ GET	/health	健康检查
 └── README.md
 
 Swagger UI 截图示例
+
 ![Swagger UI截图](images/swagger.png)
