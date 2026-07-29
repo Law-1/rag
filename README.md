@@ -67,4 +67,4 @@ GET	/health	健康检查
 └── README.md
 
 Swagger UI 截图示例
-`![](images/swagger.png)`
+![Swagger UI截图](images/swagger.png)
