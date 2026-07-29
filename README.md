@@ -70,4 +70,4 @@ GET	/health	健康检查
 
 Swagger UI 截图示例
 
-![Swagger UI截图](images/swagger.png)
+![SwaggerUI截图](https://gitee.com/liang-anwei/personal-project/raw/master/images/swagger.png)
