@@ -133,3 +133,5 @@ async def rag_chat(request: QueryRequest):
 @app.get("/health")
 def health():
     return {"status": "ok", "retriever_ready": retriever is not None}
+
+# 111
